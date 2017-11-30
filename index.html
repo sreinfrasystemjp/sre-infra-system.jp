@@ -13,7 +13,9 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ["気持ち", "％"],
-          ["動物\n見るの\nうれしい", 40],
+          ["動物
+見るの
+うれしい", 40],
           ["いい天気で\nうれしい", 30],
           ["※\nさっき\nすれ違った\n
 人のTシャツが\nかわいかった", 20],
@@ -25,7 +27,7 @@
           width: 2000,
           height: 1800,
           legend: 'none',
-          tooltip: {trigger: 'none'},
+          tooltip: 'none',
           pieSliceTextStyle: {fontSize: 11px};
         };
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
