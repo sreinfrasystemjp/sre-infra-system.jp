@@ -13,17 +13,17 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['気持ち', '％'],
-          ['動物見るのうれしい', 40],
-          ['いい天気でうれしい', 30],
-          ['※さっきすれ違った人のTシャツがかわいかった', 20],
-          ['のどがかわいた', 10],
+          ['動物\n見るの\nうれしい', 40],
+          ['いい天気で\nうれしい', 30],
+          ['※\nさっき\nすれ違った\n人のTシャツが\nかわいかった', 20],
+          ['のど\nかわいた', 10],
         ]);
         var options = {
           pieSliceText: 'label',
           title: '動物園を目の前にした気持ちの円グラフ',
           width: 1200,
           height: 900,
-          legend: {position: 'none'},
+          legend: 'none',
         };
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
         chart.draw(data, options);
