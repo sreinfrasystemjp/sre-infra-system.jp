@@ -6,31 +6,69 @@
     <title>sre-infra-system.jp</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
     <script type="text/javascript">
-      var data = [
-        {
-          value: 40,
-          color:"pink",
-          label: ["動物", "見るの", "うれしい"]
-        },
-        {
-          value: 30,
-          color: "skyblue",
-          label: ["いい天気で", "うれしい"]
-        },
-        {
-          value: 20,
-          color: "lemon",
-          label: ["※", "さっき", "すれ違った", "人のTシャツが", "かわいかった"]
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+    <script type="text/javascript">
+      Chart.plugins.register({
+        afterDatasetsDraw: function (chart, easing) {
+          var ctx = chart.ctx;
+          chart.data.datasets.forEach(function (dataset, i) {
+            var meta = chart.getDatasetMeta(i);
+            if (!meta.hidden) {
+              meta.data.forEach(function (element, index) {
+                ctx.fillStyle = 'rgb(0, 0, 0)';
+                var fontSize = 16;
+                var fontStyle = 'normal';
+                var fontFamily = 'Helvetica Neue';
+                ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                var padding = 5;
+                var position = element.tooltipPosition();
+                var lines = chart.data.labels[index];
+                var x = position.x - fontSize;
+                var y = position.y - ((fontSize + padding) * lines.length / 2) - padding;
+                for (var i = 0; i<lines.length; i++)
+                  ctx.fillText(lines[i], x, y + (i * (fontSize + padding)));
+              });
+            }
+          });
         }
-        {
-          value: 10,
-          color: "orange",
-          label: ["のどが", "かわいた"]
-        },
-      ];
-      var chart = new Chart(document.getElementById("piechart").getContext("2d")).Pie(data);
+      });
+      var color = Chart.helpers.color;
+      var data = {
+        datasets: [{
+          data: [40, 30, 20, 10],
+          backgroundColor: [
+            color("red").alpha(0.2).rgbString(),
+            color("skyblue").alpha(0.2).rgbString(),
+            color("yellow").alpha(0.2).rgbString(),
+            color("orange").alpha(0.2).rgbString(),
+          ],
+        }],
+        labels: [
+          ["動物", "見るの", "うれしい"],
+          ["いい天気で", "うれしい"],
+          ["※", "さっき", "すれ違った", "人のTシャツ", "かわいかった"],
+          ["のど", "かわ", "　い", "　　た"],
+        ],
+      };
+      window.onload = function() {
+        var ctx = document.getElementById("piechart").getContext("2d");
+        var myPieChart = new Chart(ctx, {
+          type: 'pie',
+          data: data,
+          options: {
+            legend: {
+              display: false
+            },
+            tooltips: {
+              enabled: false
+            }
+          }
+        });
+      };
     </script>
   </head>
   <body>
@@ -44,7 +82,7 @@
         </p>
       </div>
     </section>
-    <canvas id="piechart" style="width: 900px; height: 1000px;"></canvas>
+    <canvas id="piechart" style="width: 600px; height: 600px;"></canvas>
     <!-- Start of sreinfrasystemjp Zendesk Widget script -->
     <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="sreinfrasystemjp.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
 /*]]>*/</script>
