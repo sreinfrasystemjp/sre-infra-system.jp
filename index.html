@@ -6,30 +6,31 @@
     <title>sre-infra-system.jp</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
-    <script type="text/javascript" src="//www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ["気持ち", "％"],
-          ["動物見るのうれしい", 40],
-          ["いい天気でうれしい", 30],
-          ["※さっきすれ違った人のTシャツがかわいかった", 20],
-          ["のどかわいた", 10],
-        ]);
-        var options = {
-          pieSliceText: 'label',
-          title: "動物園を目の前にした気持ちの円グラフ",
-          width: 900,
-          height: 1000,
-          legend: 'none',
-          tooltip: { trigger: 'none' },
-          pieSliceTextStyle: {fontSize: 11},
-        };
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        chart.draw(data, options);
-      }
+      var data = [
+        {
+          value: 40,
+          color:"pink",
+          label: ["動物", "見るの", "うれしい"]
+        },
+        {
+          value: 30,
+          color: "skyblue",
+          label: ["いい天気で", "うれしい"]
+        },
+        {
+          value: 20,
+          color: "lemon",
+          label: ["※", "さっき", "すれ違った", "人のTシャツが", "かわいかった"]
+        }
+        {
+          value: 10,
+          color: "orange",
+          label: ["のどが", "かわいた"]
+        },
+      ];
+      var chart = new Chart(document.getElementById("piechart").getContext("2d")).Pie(data);
     </script>
   </head>
   <body>
