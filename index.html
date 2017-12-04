@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
     <style>
       .breadcrumb.has-succeeds-separator li+li::before{content:"＞"}
-      body {
-        max-width: 800px;
-      }
-      .section {
+      .container {
         max-width: 800px;
       }
       .sns {
@@ -31,6 +28,10 @@
         color: gray;
         font-size: small;
       }
+      .head_c {
+        display: inline-block;
+        text-align: left;
+      }
       .foot {
         margin-top: 1em;
         border-top: 1px dotted darkgray;
@@ -44,7 +45,6 @@
       }
       .toc {
         text-align: center;
-        max-width: 800px;
       }
       .toc_c {
         display: inline-block;
@@ -76,8 +76,10 @@
     <section class="section">
       <div class="container has-text-centered">
         <div class="head">
-          <img class="logo" src="sre-infra-system.jp.png">
-          sre-infra-system.jp
+          <div class="head_c">
+            <img class="logo" src="sre-infra-system.jp.png">
+            sre-infra-system.jp
+          </div>
         </div>
         <h1 class="title">
           これからのITシステムはSRE手法で作ろう
