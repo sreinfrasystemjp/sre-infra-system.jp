@@ -5,13 +5,9 @@ permalink: /odai/cloud
 image: /images/ms/cloud.png
 ---
 
-<nav class="breadcrumb">
-  <ul>
-    <li><a href="/">TOP</a></li>
-    <li>お題</li>
-    <li>{{ page.title }}</li>
-  </ul>
-</nav>
+<p class="breadcrumb">
+  <a href="/">TOP</a> ＞ お題 ＞ {{ page.title }}</a>
+</p>
 
 # クラウド選定基準 in Japan
 
