@@ -1,8 +1,17 @@
 ---
 layout: post
 title: "クラウド選定基準 in Japan"
+url: /odai/cloud
 image: /images/ms/cloud.png
 ---
+
+<nav class="breadcrumb">
+  <ul>
+    <li><a href="/">TOP</a></li>
+    <li>お題</li>
+    <li>{{ page.title }}</li>
+  </ul>
+</nav>
 
 # クラウド選定基準 in Japan
 
