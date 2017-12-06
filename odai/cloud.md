@@ -6,7 +6,7 @@ image: /images/ms/cloud.png
 ---
 
 <p class="breadcrumb">
-  <a href="/">TOP</a> ＞ お題 ＞ {{ page.title }}</a>
+  <a href="/">TOP</a> ＞ お題 ＞ {{ page.title }}
 </p>
 
 # クラウド選定基準 in Japan
