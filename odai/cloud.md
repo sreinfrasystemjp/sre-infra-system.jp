@@ -2,6 +2,9 @@
 layout: default
 title: "クラウド選定基準 in Japan"
 image: /icon/ms/cloud.png
+permalink: /odai/cloud
+lang: ja
+name: sre-infra-system.jp
 ---
 
 <!-- Google Tag Manager -->
