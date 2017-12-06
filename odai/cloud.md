@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "クラウド選定基準 in Japan"
 image: /images/ms/cloud.png
 ---
