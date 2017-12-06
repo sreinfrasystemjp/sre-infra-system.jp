@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "クラウド選定基準 in Japan"
 permalink: /odai/cloud
 image: /images/ms/cloud.png
