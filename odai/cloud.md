@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "クラウド選定基準 in Japan"
-url: /odai/cloud
+permalink: /odai/cloud
 image: /images/ms/cloud.png
 ---
 
