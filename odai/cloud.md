@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: default
 title: "クラウド選定基準 in Japan"
 image: /icon/ms/cloud.png
 ---
