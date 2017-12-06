@@ -1,3 +1,19 @@
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PQV7D3D');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQV7D3D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.11&appId=1374995676111926';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 # クラウド選定基準 in Japan
 
 ## 選定基準 201712版
@@ -125,3 +141,28 @@
   このうち、どれくらいの人数が GCP の技術者として働くのかはわかりませんが、  
   国内クラウド業者の「技術者全部で10名」みたいな規模感では太刀打ちできません...
 
+<div class="sns">
+  <div>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="クラウド選定基準 in Japan #sreinfrasystemjp"  data-url="https://www.sre-infra-system.jp/odai/cloud" data-show-count="false">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  <div>
+    <div class="fb-like" data-href="https://www.sre-infra-system.jp/odai/cloud" data-layout="button_count" data-action="recommend" data-size="small" data-show-faces="true" data-share="true"></div>
+  </div>
+  <div>
+    <a href="http://b.hatena.ne.jp/entry/s/www.sre-infra-system.jp/odai/cloud" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+    <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  </div>
+</div>
+<style>
+  .sns {
+    margin-top: 2em;
+    padding: 20px 0;
+  }
+  .sns div {
+    display: inline-block;
+  }
+  .fb_iframe_widget > span {
+    vertical-align: baseline !important;
+  }
+</style>
