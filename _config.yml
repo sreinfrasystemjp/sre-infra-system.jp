@@ -1,3 +1,2 @@
-site:
-  lang: ja
-  name: sre-infra-system.jp
+language: "ja"
+site_name: "sre-infra-system.jp"
